@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css'
-import Block from './Component/list';
+import Login_Register from './Component/Login/Login_Register'
+import protectedComp from './Component/Home/Home';
+import {
+  Route,
+  BrowserRouter as Router
+} from 'react-router-dom';
+import Topbar from './Component/UI/Topbar/Topbar';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      mail: '',
+      mail: '1',
       pass: ''
     };
   }
@@ -26,9 +31,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Block change={this.changeHandle}
-              stateOfComp = {this.state.mail}
-        />
+        <Topbar/>
+        <Router>
+          <Route path='/login' component={Login_Register}/>
+          <Route path='/' exact component={protectedComp}/>
+        </Router>
       </div>
     );
   }
