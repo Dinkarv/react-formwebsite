@@ -9,8 +9,8 @@ export class Login_SignUp extends Component {
     constructor() {
         super();
         this.state = {
-            isLoginOpen: false,
-            isRegisterOpen: true
+            isLoginOpen: true,
+            isRegisterOpen: false
         }
     }
 

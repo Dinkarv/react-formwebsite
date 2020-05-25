@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import Login_Register from './Component/Login/Login_Register'
-import protectedComp from './Component/Home/Home';
+import Home from './Component/Home/Home';
 import {
   Route,
   BrowserRouter as Router
@@ -14,7 +14,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      mail: '1',
+      mail: '',
       pass: ''
     };
   }
@@ -34,7 +34,7 @@ class App extends Component {
         <Topbar/>
         <Router>
           <Route path='/login' component={Login_Register}/>
-          <Route path='/' exact component={protectedComp}/>
+          <Route path='/home' exact component={Home}/>
         </Router>
       </div>
     );
