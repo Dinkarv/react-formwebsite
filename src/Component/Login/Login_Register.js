@@ -51,10 +51,10 @@ export class Login_SignUp extends Component {
                         <Col sm="12" md={{ size: 6, offset: 3 }}>
                             <Row >
                                 <Col xs="6" style={{ textAlign: "right" }}>
-                                    <Button size='lg' onClick={this.showLoginBox.bind(this)} id='login'>Login</Button>
+                                    <Button outline color="secondary" size='lg' onClick={this.showLoginBox.bind(this)} id='login'>Login</Button>
                                 </Col>
                                 <Col xs="6" style={{ textAlign: "left" }}>
-                                    <Button size='lg' onClick={this.showRegisterBox.bind(this)} id='signup'>Register</Button>
+                                    <Button outline color="secondary" size='lg' onClick={this.showRegisterBox.bind(this)} id='signup'>Register</Button>
                                 </Col>
                             </Row>
                         </Col>
