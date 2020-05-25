@@ -33,10 +33,10 @@ export class Topbar extends Component {
       render() {
         return (
             
-          <Navbar color="dark" dark expand="md">
+          <Navbar color="dark" dark expand="lg">
             <Container>
               <NavbarBrand href="/">
-                <span>IaC Application</span>
+                <span> <h4>Infosys IaC Application</h4></span>
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle}/>
               <Collapse isOpen={this.state.isOpen} navbar>

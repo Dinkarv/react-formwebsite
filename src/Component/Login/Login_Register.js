@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Login from "./Login";
 import Register from "./Register";
 import { Container, Button, Row, Col } from 'reactstrap';
+import Slider from "../Slider/Slider";
 
 export class Login_SignUp extends Component {
 
@@ -39,6 +40,10 @@ export class Login_SignUp extends Component {
         return (
             <div>
                 <Container fluid='lg'>
+                          <Row>
+        <Col sm="6" style={{ marginTop: "80px" }}><Slider/></Col>
+        <Col xs="6">
+      
                     <Row>
                         <br/>
                     </Row>
@@ -55,11 +60,14 @@ export class Login_SignUp extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col style={{ textAlign: "center" }}>
+                        <Col style={{ textAlign: "center",padding: '25px' }}>
                             {this.state.isLoginOpen && <Login/>}
                             {this.state.isRegisterOpen && <Register/>}
                         </Col>
                     </Row>
+                    </Col>
+                    </Row>
+                    
                 </Container>
             </div>
         )
