@@ -9,7 +9,7 @@ class Route extends Component {
          constructor(props){
             super(props)
             const token = localStorage.getItem('token')
-            console.log('constr',token)
+            //console.log('constr',token)
             let loggedIn = true
             if(token == null){
                 loggedIn = false
